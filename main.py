@@ -8,7 +8,7 @@ def main():
         api_key=MISTRAL_API_KEY
     )
     
-    agent = ToolCallingAgent(tools=[MistralTool(), DuckDuckGoSearchTool()], model=model)
+    agent = ToolCallingAgent(tools=[MistralTool()], model=model)
 
     ui = GradioUI(agent)
     ui.launch()
